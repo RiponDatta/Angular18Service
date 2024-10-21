@@ -1,0 +1,24 @@
+<h2>Product Lists</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="">
+            <th>Product Id</th>
+            <th>Product Title</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(product of products; track product.id)
+        {
+        <tr scope="row">
+            <td>{{ product.id }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td><button type="button" class="btn btn-primary" [routerLink]="['/edit-product', product.id]">Edit</button></td>
+        </tr>
+        }
+    </tbody>
+</table>
