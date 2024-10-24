@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="mb-3">
+            <label for="validationDefault01" class="form-label">Id</label>
+            <input type="text" class="form-control" id="validationDefault01" [(ngModel)]="product.productGuid" disabled />
+            <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="mb-3">
+            <label for="validationDefault01" class="form-label">Title</label>
+            <input type="text" class="form-control" id="validationDefault01" [(ngModel)]="product.title" required />
+            <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="mb-3">
+            <label for="validationDefault01" class="form-label">Description</label>
+            <input type="text" class="form-control" id="validationDefault01" [(ngModel)]="product.description" required />
+            <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="mb-3">
+            <label for="validationDefault01" class="form-label">Price</label>
+            <input type="text" class="form-control" id="validationDefault01" [(ngModel)]="product.price" required />
+            <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="mb-3">
+            <label for="validationDefault01" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="validationDefault01" [(ngModel)]="product.quantity" required />
+            <div class="invalid-feedback">This field is required.</div>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="updateProduct()">Update Product</button>
+<button type="button" class="btn btn-primary" [routerLink]="['/product-list']">Cancel</button>
